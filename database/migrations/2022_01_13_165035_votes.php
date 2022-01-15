@@ -17,6 +17,7 @@ class Votes extends Migration
             $table->id();
             $table->integer('candidate_id');
             $table->integer('election_id');
+            $table->integer('portfolio_id');
             $table->integer('voter_id');
 
             $table->timestamps();

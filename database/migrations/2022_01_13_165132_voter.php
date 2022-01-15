@@ -15,7 +15,7 @@ class Voter extends Migration
     {
         Schema::create('voters', function (Blueprint $table) {
             $table->id();
-            $table->integer('regnum')->unique();
+            $table->string('regnum')->unique();
             $table->string('national_id')->unique();
             $table->string('name');
             $table->enum('active',array(0,1))->default(1);

@@ -20,6 +20,7 @@ class Candidate extends Migration
             $table->integer('party_id')->nullable(true)->default(null);
             $table->string('image');
             $table->integer('portfolio_id')->nullable(FALSE);
+            $table->integer('election_id')->nullable(FALSE);
             $table->enum('active',array(0,1))->default(1);
             $table->timestamps();
         });
