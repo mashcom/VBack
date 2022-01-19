@@ -122,6 +122,9 @@
                     <li class="nav-item">
                         <a class="nav-link text-white text-uppercase font-weight-bold" href="{{ url('/voter') }}">Voters Roll</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white text-uppercase font-weight-bold" href="{{ url('/result') }}">Results Report</a>
+                    </li>
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle text-uppercase" href="#"
                            role="button"

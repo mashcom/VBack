@@ -30,5 +30,7 @@ class Candidate extends Model
     {
         return $this->belongsTo('App\Models\Portfolio');
     }
-
+    public function getNameAttribute($value){
+        return strtoupper($value);
+    }
 }

@@ -16,7 +16,7 @@ class Election extends Migration
         Schema::create('elections', function (Blueprint $table) {
             $table->id();
             $table->string('name')->unique();
-            $table->enum('active',array(0,1))->default(1);
+            $table->string('active')->default(1);
 
             $table->timestamps();
         });

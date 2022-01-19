@@ -22,8 +22,17 @@
                                 <tr>
                                     <td>{{$election->id}}</td>
                                     <td class="font-weight-bold">{{$election->name}}</td>
-                                    <td><span class="badge {{($election->active==1)?"badge-success":"badge-danger"}}">{{($election->active==1)?"ACTIVE":"NOT ACTIVE"}}</span></td>
-
+                                    <td>
+                                        <span class="badge {{($election->active==1)?"badge-success":"badge-danger"}}">{{($election->active==1)?"ACTIVE":"NOT ACTIVE"}}</span>
+                                    </td>
+                                    <td>
+                                        <form method="POST" action="{{url('election/activate/single/')}}">
+                                            <input hidden type="number" value="{{$election->id}}" name="id"/>
+                                            {{csrf_field()}}
+                                            <input type="submit" class="btn btn-primary font-weight-bold"
+                                                   value="ACTIVATE"/>
+                                        </form>
+                                    </td>
                                 </tr>
                             @endforeach
                             </tbody>
@@ -64,7 +73,9 @@
                                 </div>
 
                             </div>
-                            <button type="submit" class="btn btn-primary btn-block font-weight-bold text-uppercase">Submit</button>
+                            <button type="submit" class="btn btn-primary btn-block font-weight-bold text-uppercase">
+                                Submit
+                            </button>
                         </form>
                     </div>
                 </div>

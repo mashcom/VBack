@@ -13,4 +13,8 @@ class Portfolio extends Model
     {
         return $this->hasMany('App\Models\Candidate');
     }
+
+    public function getNameAttribute($value){
+        return strtoupper($value);
+    }
 }
